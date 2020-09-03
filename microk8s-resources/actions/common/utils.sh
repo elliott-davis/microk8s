@@ -76,17 +76,17 @@ run_with_sudo() {
     if [ "$1" == "preserve_env" ]
     then
       shift
-      sudo -E LD_LIBRARY_PATH="$GLOBAL_LD_LIBRARY_PATH" "$@"
+      /usr/bin/sudo -E LD_LIBRARY_PATH="$GLOBAL_LD_LIBRARY_PATH" "$@"
     else
-      sudo LD_LIBRARY_PATH="$GLOBAL_LD_LIBRARY_PATH" "$@"
+      /usr/bin/sudo LD_LIBRARY_PATH="$GLOBAL_LD_LIBRARY_PATH" "$@"
     fi
   else
     if [ "$1" == "preserve_env" ]
     then
       shift
-      sudo -E "$@"
+      /usr/bin/sudo -E "$@"
     else
-      sudo "$@"
+      /usr/bin/sudo "$@"
     fi
   fi
 }

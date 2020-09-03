@@ -21,7 +21,7 @@ sleep 5
 echo "Restarting kubelet"
 #TODO(kjackal): do not hardcode the info below. Get it from the yaml
 refresh_opt_in_config "cluster-domain" "cluster.local" kubelet
-refresh_opt_in_config "cluster-dns" "10.152.183.10" kubelet
+refresh_opt_in_config "cluster-dns" "100.121.22.10" kubelet
 
 restart_service kubelet
 
